@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+body{
+    font-family: "Wix Madefor Text"
+}
+h1{
+    font-size: 40px;
+    font-weight: 300px;
+}
+
+/* Splash page classes */
+.moto{
+    font-size: 20px;
+    color: #aeaeb2;
+}
+
+/* Global components */
+
+button{
+    font-size: 24px;
+    font-weight: 300px;
+}
