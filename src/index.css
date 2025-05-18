@@ -3,10 +3,7 @@
 body{
     font-family: "Wix Madefor Text"
 }
-h1{
-    font-size: 40px;
-    font-weight: 300px;
-}
+
 
 /* Splash page classes */
 .moto{
@@ -16,7 +13,27 @@ h1{
 
 /* Global components */
 
+h1{
+    font-size: 40px;
+    font-weight: 300px;
+}
+h2{
+    font-size: 24px;
+    color: #aeaeb2; 
+}
 button{
     font-size: 24px;
     font-weight: 300px;
+}
+.material-symbols-rounded {
+    font-size: 36px;
+  }
+.material-symbols-rounded.large {
+    font-size: 72px;
+  }
+
+/* Reservation page */
+h1.congrats{
+    font-size: 24px;
+    text-align: center;
 }
