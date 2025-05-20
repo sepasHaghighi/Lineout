@@ -18,7 +18,7 @@ export const places: Places = {
             name: "Alfredo's",
             distance: 3,
             rate: 5,
-            description: "Tucked away on a quiet street, Alfredo’s brings the warmth and charm of a traditional Italian trattoria to life. Known for its hand-rolled pasta, wood-fired pizzas, and rich, slow-cooked sauces, every dish is a tribute to time-honored family recipes. The cozy, rustic interior—complete with exposed brick walls, candlelit tables, and soft jazz in the background—makes it perfect for both casual lunches and romantic dinners. ",
+            description: "Tucked away on a quiet street, Alfredo’s brings the warmth and charm of a traditional Italian trattoria to life. Known for its hand-rolled pasta, wood-fired pizzas, and rich, slow-cooked sauces, every dish is a tribute to time-honored family recipes.",
             type: "Cafe & Restaurant"
         },
         {

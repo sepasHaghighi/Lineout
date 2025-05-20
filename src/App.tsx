@@ -9,6 +9,8 @@ import Places from "./Pages/Places";
 import PlacePage from "./Pages/PlacePage";
 import { Routes, Route } from 'react-router-dom';
 import Reservation from "./Pages/Reservation";
+import Fun from "./Pages/Fun";
+import Redirect from "./Pages/Redirect";
 
 function App() {
 
@@ -31,6 +33,8 @@ function App() {
           <Route path="/places/:category" element={<Places/>}></Route>
           <Route path="/places/:category/:place" element={<PlacePage/>}></Route>
           <Route path="/places/:category/:place/reservation" element={<Reservation/>}></Route>
+          <Route path="/fun" element={<Fun/>}></Route>
+          <Route path="/:funCategory/redirect" element={<Redirect/>}></Route>
 
         </Routes>
     </>

@@ -21,6 +21,9 @@ h2{
     font-size: 24px;
     color: #aeaeb2; 
 }
+h2.popup-text{
+    color: black;
+}
 button{
     font-size: 24px;
     font-weight: 300px;
