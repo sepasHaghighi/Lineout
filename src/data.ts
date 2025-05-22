@@ -7,9 +7,7 @@ type Place = {
 }
 
 type Places = {
-    restaurants: Place[]
-    stores: Place[]
-    healthcares: Place[]
+    [category : string] : Place[]
 }
 
 export const places: Places = {

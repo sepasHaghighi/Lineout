@@ -21,7 +21,7 @@ export default function Signin() {
     return (
         // Navigation area
         <div className="flex flex-col items-center">
-            <Header menu={false}/>
+            <Header menu={false} back={true}/>
             {/* Form area */}
             <div className="h-[80vh] w-full flex flex-col justify-center items-center gap-8">
                 <div className="flex flex-col justify-center items-center gap-4">

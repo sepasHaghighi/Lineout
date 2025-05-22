@@ -11,6 +11,8 @@ import { Routes, Route } from 'react-router-dom';
 import Reservation from "./Pages/Reservation";
 import Fun from "./Pages/Fun";
 import Redirect from "./Pages/Redirect";
+import Search from "./Pages/Search";
+import SearchResult from "./Pages/SearchResult";
 
 function App() {
 
@@ -35,7 +37,8 @@ function App() {
           <Route path="/places/:category/:place/reservation" element={<Reservation/>}></Route>
           <Route path="/fun" element={<Fun/>}></Route>
           <Route path="/:funCategory/redirect" element={<Redirect/>}></Route>
-
+          <Route path="/search" element={<Search/>}></Route>
+          <Route path="/searchResult/:searchTerm" element={<SearchResult/>}></Route>
         </Routes>
     </>
   )

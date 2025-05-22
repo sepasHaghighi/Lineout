@@ -8,8 +8,8 @@ export default function Auth() {
                 <h1>lineout</h1>
             </section>
             <section className="flex flex-col gap-4">
-                <Button text="Sign in" link="/signin"/>
-                <Button text="Sign up" link="/signup"/>
+                <Button text="Sign in" link="/signin" disabled={false}/>
+                <Button text="Sign up" link="/signup" disabled={false}/>
             </section>
         </div>
     )

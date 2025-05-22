@@ -5,8 +5,8 @@ import { useState } from "react"
 type textFieldType ={
     type:'text' | 'password'
     placeholder : string,
-    value : string,
-    onChange : React.ChangeEventHandler<HTMLInputElement>,
+    value ?: string,
+    onChange ?: React.ChangeEventHandler<HTMLInputElement>,
 }
 
 export default function TextField(props:textFieldType){

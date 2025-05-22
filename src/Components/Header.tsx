@@ -8,7 +8,7 @@ type HeaderProps = {
 }
 export default function Header(props:HeaderProps) {
     return (
-        <nav className="w-full flex flex-row justify-center items-center p-8 pt-4 ">
+        <nav className={`w-full sticky top-0 ${props.logoColor==="black"? "bg-[#7FC859]":"bg-white"} flex flex-row justify-center items-center p-6`}>
             <a href="" className={`flex flex-row items-center ${!props.back ? 'invisible' : ''}`} onClick={(e) => {
                 e.preventDefault();
                 window.history.back();
