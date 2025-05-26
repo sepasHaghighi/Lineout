@@ -3,7 +3,10 @@ type PopupProps = {
     message: string
     description: string
     buttonText: string
-    buttonAction: () => void;
+    buttonAction: () => void
+    secondButton: boolean
+    secondaryButtonText?: string
+    secondaryButtonAction?: () => void
 }
 
 export default function Popup(props: PopupProps) {
@@ -16,7 +19,13 @@ export default function Popup(props: PopupProps) {
                     <h3>{props.description}</h3>
                 </section>
                 {/* Popup button */}
+                <section className="flex flex-col items-center gap-4">
                 <Button text={props.buttonText} disabled={false} onClick={() => props.buttonAction()} />
+                {props.secondButton && <a href="" onClick={(e) => {
+                    e.preventDefault();
+                    window.history.back();
+                }}>{props.secondaryButtonText}</a>}
+                </section>
             </div>
         </div>
     )

@@ -21,25 +21,3 @@ export default function searchFunction
         } 
         return result
     }
-
-
-
-
-    // { category: string; matches: Place[] }[] {
-    //     const lowerTerm = searchTerm.toLowerCase();
-    //     const result = [];
-    
-    //     for (const category in places) {
-    //         const matches = places[category].filter(place =>
-    //             place.name.toLowerCase().includes(lowerTerm) ||
-    //             place.description.toLowerCase().includes(lowerTerm) ||
-    //             place.type.toLowerCase().includes(lowerTerm)
-    //         );
-    
-    //         if (matches.length > 0) {
-    //             result.push({ category, matches });
-    //         }
-    //     }
-    
-    //     return result;
-    // }

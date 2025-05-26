@@ -1,20 +1,52 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import Header from "../Components/Header"
 import restaurantImage from "@/assets/Restaurant.jpg"
 import { places } from "../data"
 import Button from "../Components/Button"
 import { useState } from "react"
 import Popup from "../Components/Popup"
+import { useEffect} from "react"
+
 
 export default function Reservation() {
+    // Show notification
+    const[showNotification, setShowNotification] = useState(false)
+    const[showPopup, setShowPopup] = useState(false)
+    const[shouldNotify, setShouldNotify] = useState(false)
+
+    // Navigate to the Navigation page
+    const navigate = useNavigate()
+    
+    function handleNotification(){
+        setShowNotification(prevShowNotification => !prevShowNotification)
+    }
     // Show popup when user hits awesome button
-    const [showPopup, setShowPopup] = useState(false)
     function handleAwesome(){
-        setShowPopup(prevShowPopup => !prevShowPopup)
+        setShowPopup(true)
+    }
+    // Close popup when user hits ok on reservation popup
+    function CloseAwesomePopup(){
+        setShowPopup(false)
+        console.log('closing the awesome popup')
+        setShouldNotify(true)
     }
 
+    useEffect(() => {
+        if(!shouldNotify)
+            {
+                console.log('still not working')
+                return
+            }else{
+                console.log("I got here!")
+            const timer = setTimeout(() => {
+                setShowNotification(true)
+            }, 3000);
+            return () => clearTimeout(timer)
+        }
+      }, [shouldNotify])
+
     // Check the category and place that the user has selected
-    const { category, place } = useParams<{ category: keyof typeof places, place: string }>()
+    const { category, place } = useParams<{ category: string, place: string }>()
     if (!category || !place) { return null }
     function slugify(str: string) {
         return str.toLowerCase().replace(/[\s']/g, '');
@@ -54,7 +86,26 @@ export default function Reservation() {
                 window.history.back();
             }}>Cancel</a>
             </section>
-            {showPopup && <Popup message="You can close the app!" description="We'll notify you when to hit the road." buttonText="Ok" buttonAction={()=>handleAwesome()}/>}
+            {showPopup && 
+            <Popup 
+            message="You can close the app!" 
+            description="We'll notify you when to hit the road." 
+            buttonText="Ok" 
+            buttonAction={()=>CloseAwesomePopup()}
+            secondButton={false}/>
+            }
+            {showNotification && 
+            <Popup 
+            message="You should get going!" 
+            description="This way you'll get there on time." 
+            buttonText="Show me the way" 
+            buttonAction={()=>navigate(`/navigation/${place}`)}
+            secondButton={true}
+            secondaryButtonText="Cancel reservation"
+            secondaryButtonAction={()=>handleNotification()}
+            />
+            }
+
         </div>
     )
 }

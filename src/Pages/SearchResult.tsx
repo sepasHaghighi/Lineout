@@ -35,7 +35,7 @@ export default function SearchResult() {
             <Header menu={true} back={true} />
             <div className="h-[80vh] w-full flex flex-col justify-center items-center gap-8">
                 <div className="flex flex-col justify-between items-center gap-4 h-screen pt-30">
-                    <section className="flex flex-col gap-4 items-center">
+                    <section className="flex flex-col gap-4 items-center mb-20">
                         <span className="material-symbols-rounded large">
                             location_searching
                         </span>
@@ -44,7 +44,7 @@ export default function SearchResult() {
                             <h2>{searchTerm}</h2>
                         </section>
                     </section>
-                    <section className="flex flex-col gap-4 items-center">
+                    <section className="flex flex-col gap-4 justify-start items-center h-full">
                         {searchResultList}
                     </section>
                 </div>

@@ -13,6 +13,7 @@ import Fun from "./Pages/Fun";
 import Redirect from "./Pages/Redirect";
 import Search from "./Pages/Search";
 import SearchResult from "./Pages/SearchResult";
+import Navigation from "./Pages/Navigation";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/:funCategory/redirect" element={<Redirect/>}></Route>
           <Route path="/search" element={<Search/>}></Route>
           <Route path="/searchResult/:searchTerm" element={<SearchResult/>}></Route>
+          <Route path="/navigation/:location" element={<Navigation/>}></Route>
         </Routes>
     </>
   )
