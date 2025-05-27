@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react"
 import Splash from "./Pages/Splash"
-import Auth from "./Pages/Auth"
-import Signin from "./Pages/Signin";
-import Signup from "./Pages/Signup";
 import SearchBy from "./Pages/SearchBy";
 import Availableservices from "./Pages/AvailableServices";
 import Places from "./Pages/Places";
@@ -30,8 +27,6 @@ function App() {
     <>
         <Routes>
           <Route path="/" element={showSplash ? <Splash /> : <AuthForm />}></Route>
-          <Route path="/signin" element={<Signin/>}></Route>
-          <Route path="/signup" element={<Signup/>}></Route>
           <Route path="/searchBy" element={<SearchBy/>}></Route>
           <Route path="/availableServices" element={<Availableservices/>}></Route>
           <Route path="/places/:category" element={<Places/>}></Route>
