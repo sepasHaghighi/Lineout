@@ -31,7 +31,7 @@ export default function Signup() {
 
     return (
         <div className="flex flex-col items-center">
-            <Header menu={false}/>
+            <Header menu={false} back={true}/>
             <div className="h-[80vh] w-full flex flex-col justify-center items-center gap-8">
                 <div className="flex flex-col justify-center items-center gap-4">
                     <h1>Sign up</h1>

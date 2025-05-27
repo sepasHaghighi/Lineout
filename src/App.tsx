@@ -14,6 +14,7 @@ import Redirect from "./Pages/Redirect";
 import Search from "./Pages/Search";
 import SearchResult from "./Pages/SearchResult";
 import Navigation from "./Pages/Navigation";
+import AuthForm from "./Components/AuthForm";
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
   return (
     <>
         <Routes>
-          <Route path="/" element={showSplash ? <Splash /> : <Auth />}></Route>
+          <Route path="/" element={showSplash ? <Splash /> : <AuthForm />}></Route>
           <Route path="/signin" element={<Signin/>}></Route>
           <Route path="/signup" element={<Signup/>}></Route>
           <Route path="/searchBy" element={<SearchBy/>}></Route>
