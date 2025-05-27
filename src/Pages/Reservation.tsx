@@ -88,7 +88,7 @@ export default function Reservation() {
             </section>
             {showPopup && 
             <Popup 
-            message="You can close the app!" 
+            message="Watch out for a notification!" 
             description="We'll notify you when to hit the road." 
             buttonText="Ok" 
             buttonAction={()=>CloseAwesomePopup()}

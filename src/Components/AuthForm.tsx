@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
 import Header from './Header'
 import { useNavigate } from 'react-router-dom'
+import { useAuthStore } from '../lib/useAuthStore'
 
 export default function AuthForm() {
     const [email, setEmail] = useState('')
@@ -27,7 +28,7 @@ export default function AuthForm() {
 
         setLoading(false)
     }
-    
+
     // Handle login and if user is verified then move him/her into the app
     const navigate = useNavigate()
     async function handleLogin(){
@@ -41,8 +42,10 @@ export default function AuthForm() {
         if (!data.user?.email_confirmed_at) {
             setError('Please verify your email before signing in.')
             await supabase.auth.signOut()
+            useAuthStore.getState().setUser(null)
             return
           }else{
+            useAuthStore.getState().setUser(data.user)
             navigate('/searchBy')
           }
     }
