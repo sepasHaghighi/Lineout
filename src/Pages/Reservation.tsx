@@ -27,17 +27,14 @@ export default function Reservation() {
     // Close popup when user hits ok on reservation popup
     function CloseAwesomePopup(){
         setShowPopup(false)
-        console.log('closing the awesome popup')
         setShouldNotify(true)
     }
 
     useEffect(() => {
         if(!shouldNotify)
             {
-                console.log('still not working')
                 return
             }else{
-                console.log("I got here!")
             const timer = setTimeout(() => {
                 setShowNotification(true)
             }, 3000);

@@ -37,7 +37,7 @@ export default function Header(props: HeaderProps) {
             {user && <span className='material-symbols-rounded focus:bg-gray-400 cursor-pointer' onClick={()=>setShowMenu(!showMenu)}> account_circle </span>}
             {showMenu && <section className="fixed top-20 right-4 flex flex-col border border-[#7FC859] bg-white rounded-2xl items-end p-4">
                 <p>{user?.email}</p>
-                <a href="/" onClick={()=>handleSignout()}>Sign out</a>
+                <a href="/Lineout/" onClick={()=>handleSignout()}>Sign out</a>
             </section>}
         </nav>
     )

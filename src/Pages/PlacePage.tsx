@@ -8,7 +8,7 @@ export default function PlacePage() {
     function slugify(str: string) {
         return str.toLowerCase().replace(/[\s']/g, '');
     }
-    const { category, place } = useParams<{ category: keyof typeof places, place: string }>();
+    const { category, place } = useParams<{ category: string, place: string }>();
     // Find selected place from the places array
     if (!category || !place) { return null }
     const selectedCategory = places[category]

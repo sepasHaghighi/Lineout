@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { places } from "../data"
 
 export default function Places() {
-    const { category } = useParams<{ category: keyof typeof places }>();
+    const { category } = useParams<{ category: string }>();
     // function to render icon based on selected category
     function renderIcon() {
         switch (category) {
