@@ -21,7 +21,7 @@ export default function Popup(props: PopupProps) {
                 {/* Popup button */}
                 <section className="flex flex-col items-center gap-4">
                     <Button text={props.buttonText} disabled={false} onClick={() => props.buttonAction()} />
-                    {props.secondButton && <a href="" onClick={() => props.secondaryButtonAction!()}>{props.secondaryButtonText}</a>}
+                    {props.secondButton && <a href="" onClick={(e)=>{e.preventDefault(); props.secondaryButtonAction!()}}>{props.secondaryButtonText}</a>}
                 </section>
             </div>
         </div>
