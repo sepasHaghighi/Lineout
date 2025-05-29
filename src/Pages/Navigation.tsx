@@ -12,7 +12,7 @@ export default function Navigation() {
                 <section className="h-[40vh] flex flex-col justify-end items-center gap-4">
                     <Button link={`#`} text="I arrived" disabled={false} />
                     <Button link={`#`} text="I need more time" disabled={false} />
-                    <a href="/searchBy">Cancel</a>
+                    <a href="/Lineout/searchBy">Cancel</a>
                 </section>
             </section>
         </div>
