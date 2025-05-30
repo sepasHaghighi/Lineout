@@ -13,6 +13,7 @@ import SearchResult from "./Pages/SearchResult";
 import Navigation from "./Pages/Navigation";
 import AuthForm from "./Components/AuthForm";
 import Arrival from "./Pages/Arrival";
+import End from "./Pages/End";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/searchResult/:searchTerm" element={<SearchResult/>}></Route>
           <Route path="/navigation/:location" element={<Navigation/>}></Route>
           <Route path="/navigation/:location/arrival" element={<Arrival/>}></Route>
+          <Route path="/end" element={<End/>}></Route>
         </Routes>
     </>
   )
